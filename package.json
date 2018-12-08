@@ -19,7 +19,7 @@
     "test": "jest build",
     "test:w": "yarn test --watch",
     "flow": "flow check src",
-    "flow:deps": "flow-typed install"
+    "flow:i": "flow-typed install"
   },
   "dependencies": {},
   "devDependencies": {
