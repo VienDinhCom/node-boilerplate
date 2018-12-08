@@ -1,0 +1,39 @@
+{
+  "name": "node-boilerplate",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "repository": "https://github.com/maxvien/node-boilerplate.git",
+  "author": "Vien Dinh <maxvien@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node .",
+    "start:w": "nodemon --watch build",
+    "build": "rimraf -rf build && babel src --verbose --copy-files --config-file ./.babelconfig -d build",
+    "build:w": "yarn build -w",
+    "prestart": "yarn build",
+    "prepublish": "yarn build",
+    "lint": "eslint src",
+    "lint:f": "eslint --fix src",
+    "test": "jest build",
+    "test:w": "yarn test --watch",
+    "flow:check": "flow check src",
+    "flow:deps": "flow-typed install"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-eslint": "8",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "flow-bin": "^0.87.0",
+    "flow-typed": "^2.5.1",
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.7",
+    "prettier": "^1.15.3"
+  }
+}
