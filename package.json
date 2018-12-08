@@ -8,7 +8,7 @@
   "scripts": {
     "start": "node .",
     "start:w": "nodemon --watch build",
-    "build": "rimraf -rf build && babel src --verbose --copy-files --config-file ./.babelconfig -d build",
+    "build": "rimraf -rf build && babel src --verbose --copy-files --config-file ./babelrc.json -d build",
     "build:w": "yarn build -w",
     "prestart": "yarn build",
     "prepublish": "yarn build",
