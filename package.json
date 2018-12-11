@@ -1,5 +1,5 @@
 {
-  "name": "node-boilerplate",
+  "name": "node-boilerplate2",
   "version": "1.0.0",
   "main": "build/index.js",
   "repository": "https://github.com/maxvien/node-boilerplate.git",
@@ -11,8 +11,7 @@
     "build": "rimraf -rf build && babel src --verbose --copy-files -d build",
     "build:w": "yarn build -w",
     "prestart": "yarn build",
-    "postinstall": "yarn build",
-    "prepublish": "yarn precommit",
+    "prepublish": "yarn precommit && yarn build",
     "precommit": "yarn test && yarn flow && yarn lint",
     "lint": "eslint src",
     "lint:f": "eslint --fix src",
