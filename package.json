@@ -10,9 +10,11 @@
     "start:w": "nodemon --watch build",
     "build": "rimraf -rf build && babel src --verbose --copy-files -d build",
     "build:w": "yarn build -w",
-    "prestart": "yarn build",
-    "prepublish": "yarn precommit && yarn build",
+    "prestart": "yarn precommit && yarn build",
+    "prepublish": "yarn build",
     "precommit": "yarn test && yarn flow && yarn lint",
+    "commit": "git add . && git commit -m",
+    "push": "git pull && git push",
     "lint": "eslint src",
     "lint:f": "eslint --fix src",
     "test": "jest src",
@@ -40,6 +42,7 @@
     "jest": "^23.6.0",
     "nodemon": "^1.18.7",
     "prettier": "^1.15.3",
-    "regenerator-runtime": "^0.13.1"
+    "regenerator-runtime": "^0.13.1",
+    "yarn": "^1.12.3"
   }
 }
