@@ -1,5 +1,5 @@
 {
-  "name": "node-boilerplate2",
+  "name": "node-boilerplate",
   "version": "1.0.0",
   "main": "build/index.js",
   "repository": "https://github.com/maxvien/node-boilerplate.git",
@@ -16,7 +16,6 @@
     "test:w": "yarn test --watch",
     "flow": "flow check src",
     "flow:i": "flow-typed install",
-    "prestart": "yarn build",
     "prepublish": "yarn precommit && yarn build",
     "precommit": "yarn test && yarn flow && yarn lint"
   },
