@@ -10,15 +10,15 @@
     "start:w": "nodemon --watch build",
     "build": "rimraf -rf build && babel src --verbose --copy-files -d build",
     "build:w": "yarn build -w",
-    "prestart": "yarn build",
-    "prepublish": "yarn precommit && yarn build",
-    "precommit": "yarn test && yarn flow && yarn lint",
     "lint": "eslint src",
     "lint:f": "eslint --fix src",
     "test": "jest src",
     "test:w": "yarn test --watch",
     "flow": "flow check src",
-    "flow:i": "flow-typed install"
+    "flow:i": "flow-typed install",
+    "prestart": "yarn build",
+    "prepublish": "yarn precommit && yarn build",
+    "precommit": "yarn test && yarn flow && yarn lint"
   },
   "dependencies": {},
   "devDependencies": {
